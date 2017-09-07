@@ -36,6 +36,14 @@
     margin:0px 0px 00px 30px;
 }
 
+.label{
+    margin:0px 60px 00px 0px;
+}
+
+.button-group{
+     margin:0px 40px 0px 0px;
+}
+
 .tab-content {
     border-left: 1px solid #ddd;
     border-right: 1px solid #ddd;
