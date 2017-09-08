@@ -4,17 +4,30 @@
   "description": "This is a website for Ristorante Con Fusion",
   "main": "index.html",
   "scripts": {
-    "start": "npm run lite",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "lite": "lite-server"
+  "start": "npm run watch:all",
+  "test": "echo \"Error: no test specified\" && exit 1",
+  "lite": "lite-server",
+  "watch:scss": "onchange 'css/*.scss' -- npm run scss",
+   "watch:all": "parallelshell 'npm run watch:scss' 'npm run lite'"
   },
-  "author": "",
+  "author": "Sara Fattouh",
   "license": "ISC",
   "devDependencies": {
-    "lite-server": "^2.2.2"
+    "lite-server": "^2.2.2",
+    "onchange": "^3.2.1",
+    "parallelshell": "^3.0.1"
   },
   "dependencies": {
     "bootstrap": "^4.0.0-alpha.6",
-    "font-awesome": "^4.7.0"
-  }
+    "font-awesome": "^4.7.0",
+    "node-sass": "^4.5.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SaraFattouh/Bootstrap.git"
+  },
+  "bugs": {
+    "url": "https://github.com/SaraFattouh/Bootstrap/issues"
+  },
+  "homepage": "https://github.com/SaraFattouh/Bootstrap#readme"
 }

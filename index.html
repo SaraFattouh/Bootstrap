@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/bootstrap-social.css">
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/styles.css"  />
+    <link href="css/stylish.css" rel="stylesheet" />
+    <link href="css/styles-old.css" rel="stylesheet" />
     <title>Ristorante Con Fusion</title>
 </head>
 
@@ -30,7 +31,7 @@
 
                 </ul>
                 <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#loginModal">
+                    <a id="login-link">
                         <span class="fa fa-sign-in"></span> Login
                     </a>
                 </span>
@@ -38,16 +39,16 @@
         </div>
     </nav>
     
-    <div id="reserveModal" class="modal fade" role="dialog">
-        <div class="modal-dialog modal-lg" role="contentinfo">
+    <div id="reserve_form" class="modal fade modal" role="dialog">
+        <div class="modal-dialog modal-lg"  role="contentinfo">
             <!-- Modal content-->
             <div class="modal-content">
-                <div class="modal-header">
+                <div class="modal-header" id="form-header">
                     <h4 class="modal-title">Reserve a Table </h4>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
 
-                <div class="modal-body">
+                <div class="modal-body" id="form-body">
 
 
                     <form class="form-inline" id="reserveform">
@@ -77,7 +78,7 @@
                         <div class="form-group row">
                             <label class="col-md-2 col-form-label">Date and Time</label>
                             <div class="col-md-5">
-                                <table>
+                                <table >
                                     <tr>
                                         <td>
                                             <span class="fa fa-calendar fa fa-lg "></span>
@@ -89,7 +90,7 @@
                                 </table>
                             </div>
                             <div class="col-md-5">
-                                <table>
+                                <table class="class="col-sm-2">
                                     <tr>
                                         <td>
                                             <span class="fa fa-clock-o fa fa-lg"></span>
@@ -98,20 +99,15 @@
                                             <input type="text" class="form-control" onfocus="(this.type='time')" placeholder="Time" />
                                         </td>
                                     </tr>
+                                  
                                 </table>
 
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <div class="offset-md-2 col-md-10">
-                                <button type="submit" class="btn btn-primary">Reserve</button>
                             </div>
                         </div>
                     </form>
                 </div>
 
-                <div class="modal-footer">
+                <div class="modal-footer" id="form-footer">
                     <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Cancel</button>
                     <button type="submit" class="btn btn-primary btn-sm">Reserve</button>
                 </div>
@@ -122,14 +118,14 @@
 
 
         <div id="loginModal" class="modal fade" role="dialog">
-            <div class="modal-dialog modal-lg" role="contentinfo">
+            <div class="modal-dialog modal-lg " role="contentinfo">
                 <!-- Modal content-->
                 <div class="modal-content">
-                    <div class="modal-header">
+                    <div class="modal-header" id="login_header" >
                         <h4 class="modal-title">Login </h4>
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                     </div>
-                    <div class="modal-body">
+                    <div class="modal-body" id="login_body">
                         <form class="form-inline">
                             <div class="form-group">
                                 <label class="sr-only" for="exampleInputEmail3">Email address</label>
@@ -146,7 +142,7 @@
                             </div>
                         </form>
                     </div>
-                    <div class="modal-footer">
+                    <div class="modal-footer" id="login_footer">
                         <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Cancel</button>
                         <button type="submit" class="btn btn-primary btn-sm">Sign in</button>
                     </div>
@@ -170,7 +166,7 @@
                                 <img src="img/logo.png" class="img-fluid">
                             </div>
                             <div class="col align-self-center">
-                                <a role="button" class="btn btn-block btn-sm nav-link bg-warning " data-toggle="modal" data-target="#reserveModal">
+                                <a role="button" id="reserve-link" class="btn btn-block btn-sm nav-link bg-warning "  data-target="#reserveModal">
                                    Reserve a Tble
                                </a>
                             </div>
@@ -405,18 +401,7 @@
         <script src="node_modules/jquery/dist/jquery.min.js"></script>
         <script src="node_modules/tether/dist/js/tether.min.js"></script>
         <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-      <script>
-          $(document).ready(function () {
-              $("#mycarousel").carousel({ interval: 1500 });
-              $("#carouselPause").click(function () {
-                  $("#mycarousel").carousel('pause')
-              });
-
-              $("#carouselPlay").click(function () {
-                  $("#mycarousel").carousel('cycle')
-              });
-          });
-      </script>
+        <script src="js/scripts.js"></script>
 </body>
 
 </html>
